@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="694.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.mylibrary.controller.CopyDetailsController">
+    <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER" style="-fx-background-color: #e8efdf">
+            <Label fx:id="title" graphicTextGap="5.0" text="Utwórz egzemplarz" textFill="BLACK">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/bookshelf.png" />
+                    </ImageView>
+                </graphic>
+                <font>
+                    <Font name="Segoe UI Symbol" size="20.0" />
+                </font>
+            </Label>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" />
+        <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+            <VBox alignment="TOP_CENTER" layoutX="210.0" layoutY="228.0">
+                <Label text="Książka">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="bookComboBox" prefWidth="150.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </ComboBox>
+            </VBox>
+            <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="NEVER">
+                <VBox alignment="TOP_CENTER">
+                    <Label text="Rok publikacji">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="yearField" promptText="Rok publikacji">
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                    </TextField>
+                </VBox>
+                <VBox alignment="TOP_CENTER">
+                    <Label text="Język">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="languageField" promptText="Język">
+                        <VBox.margin>
+                            <Insets />
+                        </VBox.margin>
+                    </TextField>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="NEVER">
+                <VBox alignment="TOP_CENTER">
+                    <Label text="Wydawnictwo">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="publisherField" promptText="Wydawnictwo" />
+                </VBox>
+                <VBox alignment="TOP_CENTER">
+                    <Label text="ISBN">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="isbnField" promptText="ISBN" />
+                </VBox>
+            </HBox>
+<!--            <VBox alignment="TOP_CENTER" layoutX="210.0" layoutY="205.0">-->
+<!--                <Label text="Status">-->
+<!--                    <font>-->
+<!--                        <Font size="15.0"/>-->
+<!--                    </font>-->
+<!--                </Label>-->
+<!--                <ComboBox fx:id="statusComboBox" prefWidth="150.0"/>-->
+<!--            </VBox>-->
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" />
+        <HBox alignment="CENTER" spacing="30.0" style="-fx-background-color: #e8efdf">
+            <padding>
+                <Insets bottom="15.0" top="15.0" />
+            </padding>
+            <Button mnemonicParsing="false" onAction="#save" styleClass="controlbutton" text="Zapisz" />
+            <Button mnemonicParsing="false" onAction="#cancel" styleClass="controlbutton" text="Anuluj" />
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="694.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.mylibrary.controller.LoanController">
+    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+        <HBox fx:id="topBox" alignment="CENTER_LEFT" spacing="35.0">
+            <Label fx:id="title" graphicTextGap="20.0" text="Wypożyczenia">
+                <padding>
+                    <Insets left="25.0" />
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="19.0" />
+                </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addLoan" styleClass="controlbutton" text="Dodaj nowe" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editLoan" styleClass="controlbutton" text="Edytuj wybrane" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteLoan" styleClass="controlbutton" text="Usuń wybrane" />
+         <Button fx:id="returnButton" layoutX="481.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnBook" styleClass="controlbutton" text="Zwróć" />
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" />
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="titleColumn" minWidth="130.0" prefWidth="130.0" text="Tytuł" />
+                <TableColumn fx:id="idColumn" minWidth="30.0" prefWidth="30.0" text="ID" />
+                <TableColumn fx:id="fullNameColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Czytelnik" />
+                <TableColumn fx:id="cardNumberColumn" maxWidth="80.0" minWidth="80.0" reorderable="false" text="Numer Karty" />
+                <TableColumn fx:id="loanDateColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" reorderable="false" text="Od kiedy" />
+                <TableColumn fx:id="plannedReturnDateColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" reorderable="false" text="Do kiedy" />
+                <TableColumn fx:id="actualReturnDateColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" reorderable="false" text="Oddano" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

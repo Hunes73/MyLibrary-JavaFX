@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="415.0" prefWidth="694.0" stylesheets="@../style.css"
+            xmlns="http://javafx.com/javafx/17" fx:controller="com.library.mylibrary.controller.BorrowerController">
+    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER_LEFT" spacing="35.0">
+            <Label graphicTextGap="20.0" text="Czytelnicy">
+                <padding>
+                    <Insets left="25.0"/>
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="19.0"/>
+                </font>
+            </Label>
+            <Button onAction="#addBorrower" mnemonicParsing="false" styleClass="controlbutton" text="Dodaj nowego"/>
+            <Button onAction="#editBorrower" mnemonicParsing="false" styleClass="controlbutton"
+                    text="Edytuj wybranego"/>
+            <Button onAction="#deleteBorrower" mnemonicParsing="false" styleClass="controlbutton"
+                    text="Usuń wybranego"/>
+            <padding>
+                <Insets bottom="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0"/>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="cardNumberColumn" editable="false" maxWidth="89.0" minWidth="60.0" prefWidth="86.0"
+                             text="Numer karty" reorderable="false"/>
+                <TableColumn fx:id="firstnameColumn" maxWidth="130.0" minWidth="101.0" prefWidth="104.0" text="Imie"
+                             reorderable="false"/>
+                <TableColumn fx:id="lastnameColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Nazwisko"
+                             reorderable="false"/>
+                <TableColumn fx:id="emailColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Email"
+                             reorderable="false"/>
+                <TableColumn fx:id="phoneColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0"
+                             text="Numer telefonu" reorderable="false"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

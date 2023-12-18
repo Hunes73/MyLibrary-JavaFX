@@ -1,0 +1,129 @@
+.sidebutton {
+    -fx-background-color: #e8efdf;
+    -fx-background-radius: 0;
+    -fx-alignment: BASELINE-LEFT;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15;
+    -fx-graphic-text-gap: 10;
+    -fx-pref-height: 53;
+    -fx-pref-width: 165;
+}
+
+.sidebutton:hover {
+    -fx-background-color: #A7B793;
+}
+
+.sidebutton:focused {
+    -fx-border-width: 0 3 0 0;
+    -fx-border-color: #395d0c;
+}
+
+.loginbutton {
+    -fx-background-color: #e8efdf;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+    -fx-font-family: "Segoe UI";
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-border-color: #395d0c;
+    -fx-font-size: 15;
+    -fx-padding: 5 15 5 15;
+}
+
+.loginbutton:hover {
+    -fx-background-color: #A7B793;
+}
+
+.controlbutton {
+    -fx-background-color: white;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+    -fx-border-width: 1;
+    -fx-border-color: #395d0c;
+    -fx-border-radius: 2;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13;
+    -fx-padding: 5 15 5 15;
+}
+
+.controlbutton:hover {
+    -fx-background-color: #A7B793;
+}
+
+.table-view {
+    -fx-text-fill: #ab2c2c;
+    -fx-border-color: white;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size: 20;
+    -fx-background-color: white;
+}
+
+.table-view .column-header .label {
+
+    -fx-text-fill: #395d0c;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #000000;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+    -fx-box-border: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #A7B793;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button, .table-view .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 2em;
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: derive(#395d0c, 80%);
+    -fx-background-radius: 2em;
+    -fx-border-radius: 2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(#395d0c, 90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+.text-field, .password-field, .text-area, .spinner {
+    -fx-border-color: #395d0c;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15;
+    -fx-padding: 5 15 5 15;
+    -fx-background-color: white;
+}
+
+.text-area {
+    -fx-padding: 0 0 0 0;
+}

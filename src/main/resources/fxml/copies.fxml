@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="694.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.mylibrary.controller.CopyController">
+    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER_LEFT" spacing="35.0">
+            <Label graphicTextGap="20.0" text="Egzemplarze">
+                <padding>
+                    <Insets left="25.0" />
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="19.0" />
+                </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addCopy" styleClass="controlbutton" text="Dodaj nowy" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editCopy" styleClass="controlbutton" text="Edytuj wybrany" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCopy" styleClass="controlbutton" text="Usuń wybrany" />
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" />
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="titleColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Tytuł" />
+                <TableColumn fx:id="yearColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Rok" />
+                <TableColumn fx:id="languageColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Język" />
+                <TableColumn fx:id="publisherColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Wydawca" />
+                <TableColumn fx:id="isbnColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" reorderable="false" text="ISBN" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

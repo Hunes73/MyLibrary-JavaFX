@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480" prefWidth="854" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.mylibrary.controller.MainController">
+    <BorderPane fx:id="borderPane" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+        <top>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-color: #395d0c;">
+                <padding>
+                    <Insets bottom="10.0" left="30.0" top="10.0" />
+                </padding>
+                <Label graphicTextGap="20.0" text="MyLibrary" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../icons/logo.png" />
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="Segoe UI Symbol" size="24.0" />
+                    </font>
+                </Label>
+            </HBox>
+        </top>
+        <left>
+            <HBox>
+                <VBox fx:id="sideBox" style="-fx-background-color: #e8efdf;" BorderPane.alignment="CENTER">
+                    <Button mnemonicParsing="false" onAction="#openAuthors" styleClass="sidebutton" text="Autorzy">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/author.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="borrowersButton" mnemonicParsing="false" onAction="#openBorrowers" styleClass="sidebutton" text="Czytelnicy">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/users.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button mnemonicParsing="false" onAction="#openCopies" styleClass="sidebutton" text="Egzemplarze">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/bookshelf.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button mnemonicParsing="false" onAction="#openBooks" styleClass="sidebutton" text="Książki">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/book.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="loansButton" mnemonicParsing="false" onAction="#openLoans" styleClass="sidebutton" text="Wypożyczenia">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/database.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="myBooksButton" mnemonicParsing="false" onAction="#openLoans" styleClass="sidebutton" text="Moje książki">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../icons/database.png" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </VBox>
+                <Separator maxWidth="1.0" minWidth="1.0" orientation="VERTICAL" prefWidth="1.0" style="-fx-background-color: #395d0c" />
+            </HBox>
+        </left>
+        <center>
+            <BorderPane style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+        </center>
+    </BorderPane>
+</AnchorPane>

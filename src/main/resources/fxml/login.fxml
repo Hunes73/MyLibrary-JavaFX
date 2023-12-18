@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="480" prefWidth="854"
+            stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            fx:controller="com.library.mylibrary.controller.LoginController">
+    <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #395d0c;">
+            <padding>
+                <Insets bottom="10.0" left="30.0" top="10.0"/>
+            </padding>
+            <Label graphicTextGap="20.0" text="MyLibrary" textFill="WHITE">
+                <graphic>
+                    <ImageView fitHeight="45.0" fitWidth="45.0" nodeOrientation="INHERIT" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="@../icons/logo.png"/>
+                    </ImageView>
+                </graphic>
+                <font>
+                    <Font name="Segoe UI Symbol" size="24.0"/>
+                </font>
+            </Label>
+        </HBox>
+        <VBox alignment="CENTER" spacing="30.0" style="-fx-background-color: #e8efdf;" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets left="300.0" right="300.0"/>
+            </padding>
+            <Label text="Logowanie">
+                <font>
+                    <Font name="Segoe UI" size="35.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="cardNumberField" promptText="Nr. karty ">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </TextField>
+            <PasswordField fx:id="passwordField" promptText="Hasło">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </PasswordField>
+            <Button fx:id="loginButton" onAction="#login" styleClass="loginbutton" text="Zaloguj się"/>
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="694.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.mylibrary.controller.BookController">
+    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER_LEFT" spacing="35.0">
+            <Label graphicTextGap="20.0" text="Książki">
+                <padding>
+                    <Insets left="25.0" />
+                </padding>
+                <font>
+                    <Font name="Segoe UI" size="19.0" />
+                </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addBook" styleClass="controlbutton" text="Dodaj nową" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editBook" styleClass="controlbutton" text="Edytuj wybraną" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteBook" styleClass="controlbutton" text="Usuń wybraną" />
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <Separator maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" />
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="titleColumn" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" reorderable="false" text="Tytuł" />
+                <TableColumn fx:id="authorColumn" maxWidth="230.0" minWidth="230.0" prefWidth="230.0" reorderable="false" text="Autor" />
+                <TableColumn fx:id="genreColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Gatunek" />
+                <TableColumn fx:id="descriptionColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" reorderable="false" text="Opis" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
