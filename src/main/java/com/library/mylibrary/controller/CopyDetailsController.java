@@ -43,9 +43,6 @@ public class CopyDetailsController implements Initializable {
     @FXML
     private ComboBox<BookModel> bookComboBox;
 
-//    @FXML
-//    private ComboBox<String> statusComboBox;
-
 
     public CopyDetailsController(MainController mainController, CopyServiceImpl copyService, BookServiceImpl bookService) {
         this.mainController = mainController;
@@ -72,8 +69,6 @@ public class CopyDetailsController implements Initializable {
             }
         });
 
-//        statusComboBox.getItems().addAll("Dostępny", "Wypożyczony");
-
         switch (mode) {
             case "update" -> {
                 title.setText("Edytuj egzemplarz");
@@ -82,11 +77,9 @@ public class CopyDetailsController implements Initializable {
                 languageField.setText(copyModel.getLanguage().getValue());
                 publisherField.setText(copyModel.getPublisher().getValue());
                 isbnField.setText(copyModel.getIsbn().getValue());
-//                statusComboBox.getSelectionModel().select(copyModel.getStatus().getValue());
             }
             case "create" -> {
                 title.setText("Dodaj egzemplarz");
-//                statusComboBox.getSelectionModel().select("Dostępny");
             }
         }
     }

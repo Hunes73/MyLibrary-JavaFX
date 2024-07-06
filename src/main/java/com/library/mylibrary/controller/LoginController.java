@@ -38,7 +38,6 @@ public class LoginController {
 
     @FXML
     protected void login() throws IOException {
-//            MainController mainController = applicationContext.getBean(MainController.class);
         if (cardNumberField.getText().equals("admin") && passwordField.getText().equals("admin")) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
             fxmlLoader.setControllerFactory(applicationContext::getBean);
